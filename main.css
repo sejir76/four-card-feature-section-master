@@ -23,12 +23,18 @@ main {
 	display: grid;
 	grid-gap: 15px;
 
-    grid-template-areas: none;
+    grid-template-areas: 
+        "superior"
+        "supervisor"
+        "team"
+        "karma"
+        "calculator";
         
 }
 
 .superior :first-of-type{
-	grid-area:span;
+    text-align: center;
+	grid-area: superior;
 
     
 }
@@ -40,7 +46,7 @@ main {
     box-shadow: 1px 3px 13px 1px rgba(0,0,0,0.2);
     margin: 1vh 3vh;
     background-color: hsl(0, 0%, 98%);
-	grid-area: span;
+	grid-area: supervisor;
 }
 
 .team {
@@ -49,7 +55,7 @@ main {
     box-shadow: 1px 3px 13px 1px rgba(0,0,0,0.2);
     margin: 1vh 3vh;
     background-color:hsl(0, 0%, 98%);
-	grid-area: span;
+	grid-area: team;
 }
 
 .karma {
@@ -58,7 +64,7 @@ main {
     box-shadow: 1px 3px 13px 1px rgba(0,0,0,0.2);
     margin: 1vh 3vh;
     background-color:hsl(0, 0%, 98%);
-	grid-area: span;
+	grid-area: karma;
 }
 
 .calculator {
@@ -67,7 +73,7 @@ main {
     box-shadow: 1px 3px 13px 1px rgba(0,0,0,0.2);
     margin: 1vh 3vh;
     background-color:hsl(0, 0%, 98%);
-	grid-area: span;
+	grid-area: calculator;
     margin-bottom: 25px;
 }
 
@@ -124,5 +130,52 @@ h4{
 }
 
 @media screen and (min-width: 500px){
+
+    main {
+        text-align: center;
+        display:grid;
+        grid-template-areas: 
+        ". superior ."
+        "supervisor team ."
+        ". team ."
+        ". karma ."
+        ". karma calculator";
+
+    }
+
+    .superior{
+        grid-area: superior;
+    }
+
+    .supervisor{
+    border-top: 1px solid hsl(180, 62%, 55%);
+    border-radius: 9px;
+    box-shadow: 1px 3px 13px 1px rgba(0,0,0,0.2);
+    margin: 1vh 3vh;
+    background-color: hsl(0, 0%, 98%);
+	grid-area: supervisor;
+    }
+
+    .team{
+        grid-area: team;
+    }
+
+    .karma{
+        grid-area: karma;
+    }
+
+    .calculator{
+        grid-area: calculator;
+    }
+
+    h4, .bloque{
+        text-align: left;
+        margin-left: 1.6em;
+        margin-bottom: 30px;
+        margin-right: 120px;
+    
+    }
+    
+ 
     
 }
